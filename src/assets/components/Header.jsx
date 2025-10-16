@@ -1,0 +1,56 @@
+import { Link } from "react-router-dom";
+export function Header() {
+  return (
+    <div class="container py-6">
+      <div class="flex items-center justify-center gap-x-10">
+        <div>
+          <h1 class="text-[32px] leading-1">SHOP.CO</h1>
+        </div>
+        <ul class="flex items-center justify-items-center gap-x-6">
+          <li>
+            <Link
+              to="/"
+              class="text-base  hover:text-opacity-[40%] inline-flex items-center justify-center gap-x-1"
+            >
+              Shop
+              <img src="/icons/Frame.svg" alt="drop icon" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/" class="text-base hover:text-opacity-[40%]">
+              On Sale
+            </Link>
+          </li>
+          <li>
+            <Link to="/" class=" text-base hover:text-opacity-[40%]">
+              Case Study
+            </Link>
+          </li>
+          <li>
+            <Link to="/" class=" text-base hover:text-opacity-[40%]">
+              Blog
+            </Link>
+          </li>
+        </ul>
+        <div class="flex-1 relative ">
+          <span class="  absolute top-1/2 -translate-y-1/2 left-4">
+            <img src="/icons/search.svg" alt="search icon" />
+          </span>
+          <input
+            type="text"
+            placeholder="Search for products..."
+            class="w-full text-[#000] placeholder:text-base placeholder:text-[#000000] placeholder:opacity-[40%] outline-none bg-[#F0F0F0] py-3 rounded-full pl-[52px] pr-10"
+          />
+        </div>
+        <div class="flex items-center justify-center gap-x-[14px]">
+          <span>
+            <img src="/icons/cart.svg" alt="cart icon" />
+          </span>
+          <span>
+            <img src="/icons/login.svg" alt="profile icon" />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
