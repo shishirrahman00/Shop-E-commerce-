@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@font-face {
+  font-family: Satoshi-black;
+  font-weight: 900;
+  src: url("assets/font/Satoshi-Black.otf");
+}
+/* SATOSHI FONT  */
+@font-face {
+  font-family: Satoshi-bold;
+  font-weight: 700;
+  src: url("assets/font/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-medium;
+  font-weight: 500;
+  src: url("assets/font/Satoshi-Medium.otf");
+}
+@font-face {
+  font-family: Satoshi-regular;
+  font-weight: 400;
+  src: url("assets/font/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Satoshi-light;
+  font-weight: 300;
+  src: url("assets/font/Satoshi-Light.otf");
+}
+
+/* SATOSHI FONT  */
+
+/* INTEGRAL-CF FONT  */
+
+@font-face {
+  font-family: Integral-bold;
+  font-weight: 700;
+  src: url("assets/font/Fontspring-DEMO-integralcf-bold.otf");
+}
+
+@font-face {
+  font-family: Integral-medium;
+  font-weight: 500;
+  src: url("assets/font/Fontspring-DEMO-integralcf-medium.otf");
+}
+@font-face {
+  font-family: Integral-regular;
+  font-weight: 500;
+  src: url("assets/font/Fontspring-DEMO-integralcf-regular.otf");
+}
+
+/* INTEGRAL-CF FONT  */
+
+@theme {
+  --container-desktop: 1080px;
+  --font-Satoshi-black: Satoshi-black, "sans-serif";
+  --font-Satoshi-bold: Satoshi-bold, "sans-serif";
+  --font-Satoshi-medium: Satoshi-medium, "sans-serif";
+  --font-Satoshi-regular: Satoshi-regular, "sans-serif";
+  --font-Satoshi-light: Satoshi-light, "sans-serif";
+  --font-Integral-bold: Integral-bold, "sans-serif";
+  --font-Integral-medium: Integral-medium, "sans-serif";
+  --font-Integral-regular: Integral-regular, "sans-serif";
+}
