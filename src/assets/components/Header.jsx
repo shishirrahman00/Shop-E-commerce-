@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 export function Header() {
   return (
     <div className="container py-6">
-      <div className="flex items-center justify-center gap-x-10">
+      <div className="flex items-center justify-center gap-x-10 ">
         <div>
-          <h1 className="text-[32px] ">SHOP.CO</h1>
+          <Link to="/">
+            <h1 className="text-[32px] ">SHOP.CO</h1>
+          </Link>
         </div>
         <ul className="flex items-center justify-center gap-x-6">
           <li>
@@ -23,12 +25,12 @@ export function Header() {
           </li>
           <li>
             <Link to="/" className=" text-base hover:text-opacity-[40%]">
-              Case Study
+              New Arrivals
             </Link>
           </li>
           <li>
             <Link to="/" className=" text-base hover:text-opacity-[40%]">
-              Blog
+              Brands
             </Link>
           </li>
         </ul>

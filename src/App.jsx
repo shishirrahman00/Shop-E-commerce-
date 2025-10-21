@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import { ProductLoader } from "./loader/product-loader";
 import { LandingPage } from "./pages/landing-page";
 import LandingPageIndex from "./pages/landing-page-index";
 function App() {
@@ -12,7 +13,13 @@ function App() {
           path: "",
           element: <LandingPageIndex />,
           index: true,
+          loader: ProductLoader,
         },
+        // {
+        //   path: "/brands",
+        //   element: ,
+        //   index: true,
+        // },
       ],
     },
   ]);
