@@ -1,4 +1,4 @@
-export default function Envelop({ className }) {
+export function Envelop({ className }) {
   return (
     <svg
       className={className}

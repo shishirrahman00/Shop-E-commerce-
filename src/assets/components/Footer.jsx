@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Envelop from "../../../public/icons/envelop.jsx";
+import { Envelop } from "../../../public/icons/envelop.jsx";
 import { Facebook } from "../../../public/icons/facebook.jsx";
 import { Github } from "../../../public/icons/github.jsx";
 import { Instagram } from "../../../public/icons/instagram.jsx";
