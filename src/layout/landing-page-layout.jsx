@@ -1,8 +1,8 @@
-import { AnnouncementBar } from "../assets/components/announcementBar";
+import { AnnouncementBar } from "../assets/components/AnnouncementBar";
 import { Footer } from "../assets/components/footer";
 import { Header } from "../assets/components/header";
 
-export default function LandingPageLayout({ children }) {
+export function LandingPageLayout({ children }) {
   return (
     <>
       <AnnouncementBar />
