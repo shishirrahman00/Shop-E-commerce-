@@ -11,7 +11,7 @@ export function Header() {
         <ul className="flex items-center justify-center gap-x-6">
           <li>
             <Link
-              to="/"
+              to="/checkoutcart"
               className="text-base hover:text-opacity-[40%] inline-flex items-center justify-center gap-x-1"
             >
               Shop

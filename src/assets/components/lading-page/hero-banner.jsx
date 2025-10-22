@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../button";
 
 export function HeroBanner() {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[#F2F0F1]">
       <div className="container">
@@ -15,7 +18,14 @@ export function HeroBanner() {
                 garments, designed to bring out your individuality and cater to
                 your sense of style.
               </p>
-              <Button type={"shopNow"}>Shop Now</Button>
+              <Button
+                onClick={() => {
+                  return navigate("/shop");
+                }}
+                type={"shopNow"}
+              >
+                Shop Now
+              </Button>
             </div>
             <div className="flex flex-wrap gap-x-6 mt-8">
               <div className="border-r border-[#000]/10  pr-6">

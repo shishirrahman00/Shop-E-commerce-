@@ -1,4 +1,4 @@
-export function Button({ children, type }) {
+export function Button({ children, type, onClick }) {
   let baseStyle =
     "inline-flex items-center justify-center rounded-[62px] cursor-pointer font-Satoshi-medium text-base  py-4 ";
   let style = "";
@@ -11,5 +11,9 @@ export function Button({ children, type }) {
       "px-18 bg-white text-black border-[#000]/10 hover:text-white hover:bg-black transition-colors ";
   }
 
-  return <button className={`${baseStyle} ${style}`}>{children}</button>;
+  return (
+    <button onClick={onClick} className={`${baseStyle} ${style}`}>
+      {children}
+    </button>
+  );
 }
