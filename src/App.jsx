@@ -2,9 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { ProductLoader } from "./loader/product-loader";
 import { CheckoutCart } from "./pages/cart/cart";
-import { CategoryPage } from "./pages/category-page/category";
+import { CategoryPage } from "./pages/category-page/category-page";
 import { LandingPage } from "./pages/landing-page";
 import LandingPageIndex from "./pages/landing-page-index";
+import { ProductDetails } from "./pages/product-details/product-details";
 function App() {
   const router = createBrowserRouter([
     {
@@ -20,6 +21,13 @@ function App() {
         {
           path: "/shop",
           element: <CategoryPage />,
+          index: true,
+          loader: ProductLoader,
+        },
+        {
+          path: "/productdetails/:id",
+          element: <ProductDetails />,
+          loader: ProductLoader,
           index: true,
         },
         {

@@ -1,4 +1,5 @@
 import { CategoryFilter } from "../../assets/components/category-page/category-filter";
+import { CategoryProducts } from "../../assets/components/category-page/category-products";
 
 export function CategoryPage() {
   return (
@@ -9,7 +10,9 @@ export function CategoryPage() {
           <div className="col-start-1 col-end-4">
             <CategoryFilter />
           </div>
-          <div className="col-start-4 col-end-13"></div>
+          <div className="col-start-4 col-end-13">
+            <CategoryProducts />
+          </div>
         </div>
       </div>
     </div>
