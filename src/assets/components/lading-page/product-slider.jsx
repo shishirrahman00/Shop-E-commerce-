@@ -31,7 +31,7 @@ export function ProductSlider() {
                 <img
                   src={it.thumbnail}
                   alt={it.title}
-                  className="w-full object-cover  transition-transform duration-500 group-hover:scale-105"
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-4  translate-y-full group-hover:translate-y-0 transition-transform duration-500">
@@ -41,7 +41,7 @@ export function ProductSlider() {
                 </div>
               </div>
               <div className="text-center">
-                <h1 className="font-Satoshi-bold text-[20px] leading-[1] mb-2">
+                <h1 className="font-Satoshi-bold text-[20px] leading-[1] mb-2 line-clamp-1">
                   {it.title}
                 </h1>
                 <p className="text-sm mb-2">

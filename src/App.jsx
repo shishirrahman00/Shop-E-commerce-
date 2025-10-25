@@ -1,10 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import { ProductContextPovider } from "./context/product-context";
 import { ProductLoader } from "./loader/product-loader";
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
+      // errorElement: <ErrorPage />,
       // element: <LandingPage />,
       lazy: async () => {
         return {
@@ -62,10 +64,24 @@ function App() {
           },
           index: true,
         },
+        {
+          path: "*",
+          lazy: async () => {
+            return {
+              Component: await import("./pages/error-page").then(
+                (comp) => comp.ErrorPage
+              ),
+            };
+          },
+        },
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <ProductContextPovider>
+      <RouterProvider router={router} />
+    </ProductContextPovider>
+  );
 }
 
 export default App;

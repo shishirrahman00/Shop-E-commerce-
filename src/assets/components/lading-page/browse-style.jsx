@@ -12,7 +12,7 @@ export function BrowseStyle() {
             <div className="relative mb-5">
               <Link to="/">
                 <img
-                  src="../../../../public/images/casual.png"
+                  src="/images/casual.png"
                   alt="Casual"
                   className=" w-full h-[290px] rounded-[20px]  bg-white object-cover"
                 />
@@ -26,7 +26,7 @@ export function BrowseStyle() {
             <div className="relative mb-5">
               <Link to="/">
                 <img
-                  src="../../../../public/images/formal.png"
+                  src="/images/formal.png"
                   alt="Formal"
                   className=" w-full h-[290px] rounded-[20px]  bg-white object-cover"
                 />
@@ -42,7 +42,7 @@ export function BrowseStyle() {
             <div className="relative">
               <Link to="/">
                 <img
-                  src="../../../../public/images/party.png"
+                  src="/images/party.png"
                   alt="Formal"
                   className=" w-full h-[290px] rounded-[20px]  bg-white object-cover"
                 />
@@ -56,7 +56,7 @@ export function BrowseStyle() {
             <div className="relative">
               <Link to="/">
                 <img
-                  src="../../../../public/images/gym.png"
+                  src="/images/gym.png"
                   alt="Formal"
                   className=" w-full h-[290px] rounded-[20px]  bg-white object-cover"
                 />
