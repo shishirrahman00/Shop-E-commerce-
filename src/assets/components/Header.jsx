@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SearchProduct } from "./search-product";
 export function Header() {
   return (
     <div className="container py-6">
@@ -34,16 +35,8 @@ export function Header() {
             </Link>
           </li>
         </ul>
-        <div className="flex-1 relative ">
-          <span className="  absolute top-1/2 -translate-y-1/2 left-4">
-            <img src="/icons/search.svg" alt="search icon" />
-          </span>
-          <input
-            type="text"
-            placeholder="Search for products..."
-            className="w-full text-[#000] placeholder:text-base placeholder:text-[#000000] placeholder:opacity-[40%] outline-none bg-[#F0F0F0] py-3 rounded-full pl-[52px] pr-10"
-          />
-        </div>
+        <SearchProduct />
+
         <div className="flex items-center justify-center gap-x-[14px]">
           <span>
             <img src="/icons/cart.svg" alt="cart icon" />

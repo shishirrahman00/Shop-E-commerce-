@@ -1,8 +1,11 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { ProductContextPovider } from "./context/product-context";
-import { ProductLoader } from "./loader/product-loader";
+import { ProductLoader, SingleProductLoader } from "./loader/product-loader";
+
 function App() {
+  const queryClient = new QueryClient();
   const router = createBrowserRouter([
     {
       path: "/",
@@ -38,7 +41,7 @@ function App() {
               ).then((comp) => comp.CategoryPage),
             };
           },
-          index: true,
+
           loader: ProductLoader,
         },
         {
@@ -50,8 +53,7 @@ function App() {
               ).then((comp) => comp.ProductDetails),
             };
           },
-          loader: ProductLoader,
-          index: true,
+          loader: SingleProductLoader,
         },
         {
           path: "/checkoutcart",
@@ -78,9 +80,11 @@ function App() {
     },
   ]);
   return (
-    <ProductContextPovider>
-      <RouterProvider router={router} />
-    </ProductContextPovider>
+    <QueryClientProvider client={queryClient}>
+      <ProductContextPovider>
+        <RouterProvider router={router} />
+      </ProductContextPovider>
+    </QueryClientProvider>
   );
 }
 
