@@ -203,8 +203,9 @@ export function Header() {
 
               <SheetFooter>
                 <div className="flex justify-between items-center">
-                  <h2>Subtotal :</h2>
+                  <h2>Subtotal : </h2>
                   <p>
+                    ${" "}
                     {state.cart
                       .reduce((acc, curr) => {
                         return curr.quantity * curr.price + acc;
