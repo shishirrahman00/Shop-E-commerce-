@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 
 export function ProductSlider() {
   const productData = useLoaderData();
-  const { state, dispatch } = useContext(ProductContext);
+  const { dispatch } = useContext(ProductContext);
   const navigate = useNavigate();
   let settings = {
     // autoplay: true,
@@ -19,7 +19,6 @@ export function ProductSlider() {
     slidesToShow: 4,
     // centerPadding: "20px",
   };
-  console.log(state.cart);
 
   return (
     <div>

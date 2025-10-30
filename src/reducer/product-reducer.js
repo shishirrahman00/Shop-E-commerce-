@@ -1,4 +1,4 @@
-import { ADD_TO_CART, GET_PRODUCTS } from "../actions/action.js";
+import { ADD_TO_CART, GET_PRODUCTS, UPDATE_CART } from "../actions/action.js";
 export const ProductReducer = (state, action) => {
   switch (action.type) {
     case GET_PRODUCTS:
@@ -27,6 +27,36 @@ export const ProductReducer = (state, action) => {
         return {
           ...state,
           cart: [...state.cart, action.payload],
+        };
+      }
+    case UPDATE_CART:
+      if (action.payload.operation === "PLUS") {
+        return {
+          ...state,
+          cart: state.cart.map((product) => {
+            return product.id === action.payload.product.id
+              ? {
+                  ...product,
+                  quantity: product.quantity + action.payload.quantity,
+                }
+              : product;
+          }),
+        };
+      } else {
+        return {
+          ...state,
+          cart: state.cart
+            .map((product) => {
+              return product.id === action.payload.product.id
+                ? {
+                    ...product,
+                    quantity: product.quantity - action.payload.quantity,
+                  }
+                : product;
+            })
+            .filter((product) => {
+              return product.quantity !== 0;
+            }),
         };
       }
 
