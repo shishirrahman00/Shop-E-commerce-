@@ -1,4 +1,9 @@
-import { ADD_TO_CART, GET_PRODUCTS, UPDATE_CART } from "../actions/action.js";
+import {
+  ADD_TO_CART,
+  GET_PRODUCTS,
+  PRODUCT_DELETE,
+  UPDATE_CART,
+} from "../actions/action.js";
 export const ProductReducer = (state, action) => {
   switch (action.type) {
     case GET_PRODUCTS:
@@ -59,6 +64,13 @@ export const ProductReducer = (state, action) => {
             }),
         };
       }
+    case PRODUCT_DELETE:
+      return {
+        ...state,
+        cart: state.cart.filter((product) => {
+          return product.id !== action.payload.product.id;
+        }),
+      };
 
     default:
       return state;

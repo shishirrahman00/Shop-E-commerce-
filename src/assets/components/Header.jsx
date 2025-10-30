@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-import { UPDATE_CART } from "@/actions/action";
+import { PRODUCT_DELETE, UPDATE_CART } from "@/actions/action";
 import {
   Sheet,
   SheetClose,
@@ -166,7 +166,17 @@ export function Header() {
                             </div>
                           </div>
 
-                          <button className="absolute top-5 right-0 cursor-pointer w-6 h-6 bg-black text-white inline-flex items-center justify-center rounded-full">
+                          <button
+                            onClick={() => {
+                              return dispatch({
+                                type: PRODUCT_DELETE,
+                                payload: {
+                                  product,
+                                },
+                              });
+                            }}
+                            className="absolute top-5 right-0 cursor-pointer w-6 h-6 bg-black text-white inline-flex items-center justify-center rounded-full"
+                          >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="24"
