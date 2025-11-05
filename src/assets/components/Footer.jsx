@@ -7,14 +7,14 @@ import { Twitter } from "../../../public/icons/twitter.jsx";
 export function Footer() {
   return (
     <footer>
-      <div className="container relative z-[1] mb-[-92px]">
-        <div className="grid grid-cols-12 items-center rounded-[20px] bg-[#000] px-16 py-9">
-          <div className="col-start-1 col-end-8">
-            <h2 className="font-Integral-bold text-[40px] leading-[45px] text-white">
+      <div className="container relative z-[1] mb-[-92px] px-5 xl:px-0">
+        <div className="grid grid-cols-12 items-center rounded-[20px] bg-[#000] md:px-16 px-6 py-9 gap-y-6">
+          <div className="xl:col-start-1 xl:col-end-8 lg:col-start-1 lg:col-end-8 col-start-1 col-end-13">
+            <h2 className="font-Integral-bold md:text-[40px] md:leading-[45px] text-[32px] leading-[35px] text-white">
               STAY UPTO DATE ABOUT OUR LATEST OFFERS
             </h2>
           </div>
-          <div className="col-start-9 col-end-13">
+          <div className="xl:col-start-9 xl:col-end-13 lg:col-start-8 lg:col-end-13 col-start-1 col-end-13">
             <form>
               <div className="relative">
                 <Envelop
@@ -35,13 +35,13 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="bg-[#F0F0F0] pt-[160px]">
+      <div className="bg-[#F0F0F0] pt-[160px] px-5 xl:px-0">
         <div className="container">
-          <div className="grid grid-cols-12 mb-12">
-            <div className="col-start-1 col-end-5">
+          <div className="grid grid-cols-12 gap-y-10 mb-12">
+            <div className="lg:col-start-1 lg:col-end-5 md:col-start-1 md:col-end-7 col-start-1 col-end-13 ">
               <h1 className="mb-6 text-3xl leading-[1]">SHOP.CO</h1>
 
-              <p className="mb-6 text-sm leading-[22px] text-black/60 max-w-[250px]">
+              <p className="mb-6 text-sm leading-[22px] text-black/60 md:max-w-[250px] w-full">
                 We have clothes that suits your style and which you’re proud to
                 wear. From women to men.
               </p>
@@ -81,7 +81,7 @@ export function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-start-5 col-end-7">
+            <div className="lg:col-start-5 lg:col-end-7 md:col-start-7 md:col-end-13 col-start-1 col-end-13 ">
               <h3 className="uppercase text-base font-Satoshi-medium leading-[18px] tracking-[3px] mb-6">
                 Company
               </h3>
@@ -100,7 +100,7 @@ export function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-start-7 col-end-9">
+            <div className="lg:col-start-7 lg:col-end-9 md:col-start-1 md:col-end-7 col-start-1 col-end-13 ">
               <h3 className="uppercase text-base font-Satoshi-medium leading-[18px] tracking-[3px] mb-6">
                 Help
               </h3>
@@ -119,7 +119,7 @@ export function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-start-9 col-end-11">
+            <div className="lg:col-start-9 lg:col-end-11 md:col-start-7 md:col-end-13 col-start-1 col-end-13 ">
               <h3 className="uppercase text-base font-Satoshi-medium leading-[18px] tracking-[3px] mb-6">
                 Faq
               </h3>
@@ -138,7 +138,7 @@ export function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col-start-11 col-end-13">
+            <div className="lg:col-start-11 lg:col-end-13 md:col-start-1 md:col-end-7 col-start-1 col-end-13 ">
               <h3 className="uppercase text-base font-Satoshi-medium leading-[18px] tracking-[3px] mb-6">
                 Resources
               </h3>
@@ -158,13 +158,13 @@ export function Footer() {
               </ul>
             </div>
           </div>
-          <div className="flex items-center justify-between border-t border-[#000]/10 py-5">
+          <div className="flex flex-col md:flex-row gap-y-6 items-center justify-between border-t border-[#000]/10 py-5">
             <div>
               <p className="text-sm text-black/60">
                 Shop.co {new Date().getFullYear()}. All Rights Reserved
               </p>
             </div>
-            <div className="flex">
+            <div className="flex items-center">
               <img src="/icons/visa.svg" alt="Visa Icon" />
               <img src="/icons/mastercard.svg" alt="MasterCard Icon" />
               <img src="/icons/paypal.svg" alt="Paypal Icon" />

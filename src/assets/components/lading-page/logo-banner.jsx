@@ -1,6 +1,6 @@
 export function LogoBanner() {
   return (
-    <div className="bg-[#000] py-[42px]">
+    <div className="bg-[#000] py-[42px] px-5 xl:px-0">
       <div className="container">
         <div className="flex items-center justify-center gap-x-5 gap-y-6 md:gap-x-7  lg:gap-x-10 xl:gap-x-5 xl:justify-between flex-wrap">
           <img

@@ -65,22 +65,48 @@ export function ReviewSlider() {
   let settings = {
     autoplay: true,
     draggable: true,
-    infinite: true,
     speed: 300,
-    slidesToScroll: 1,
     slidesToShow: 5,
-    centerPadding: "20px",
-    // variableWidth: true,
-    // arrows: true,
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="py-20">
+    <div className="py-20 px-5 xl:px-0">
       <div className="container">
         <div className="relative mb-10">
-          <h1 className="text-5xl leading-[1]">OUR HAPPY CUSTOMERS</h1>
+          <h1 className="md:text-5xl md:leading-[1] text-[32px] leading-9">
+            OUR HAPPY CUSTOMERS
+          </h1>
           <div className="absolute right-0 bottom-0 flex items-center gap-x-2">
             <button onClick={goToPrev} className="cursor-pointer">
               <svg
