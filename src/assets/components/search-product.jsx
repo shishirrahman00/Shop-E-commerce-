@@ -37,7 +37,7 @@ export function SearchProduct() {
 
   return (
     <div ref={containerRef} className="relative flex-1 ">
-      <div className="relative ">
+      <div className="relative xl:block hidden  ">
         <span className="  absolute top-1/2 -translate-y-1/2 left-4">
           <img src="/icons/search.svg" alt="search icon" />
         </span>
@@ -54,7 +54,7 @@ export function SearchProduct() {
         />
       </div>
       <div
-        className={`absolute rounded-[20px] right-0 z-10 w-[500px] h-dvh bg-[#fff8f8e5] text-black overflow-scroll overflow-x-hidden flex flex-col gap-y-3 transition-all duration-300 ease-in-out transform
+        className={`absolute rounded-[20px] right-0 z-10 w-[500px] h-[300px] bg-[#fff8f8e5] text-black overflow-y-scroll overflow-x-hidden flex flex-col gap-y-3 transition-all duration-300 ease-in-out transform
     ${
       showBox
         ? "opacity-100 translate-y-0 visible"
@@ -63,7 +63,7 @@ export function SearchProduct() {
   `}
       >
         {isPending && (
-          <div className="bg-[#fff8f8e5] w-full h-full inline-flex items-center justify-center text-gray-500">
+          <div className="bg-white w-full h-full inline-flex items-center justify-center text-gray-500">
             Searching For Products...
           </div>
         )}

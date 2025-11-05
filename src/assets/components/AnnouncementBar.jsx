@@ -11,7 +11,7 @@ export function AnnouncementBar() {
               Sign Up Now
             </Link>
           </p>
-          <button className="text-white text-[20px] absolute top-1/2 -translate-y-1/2 right-0 ">
+          <button className="text-white text-[20px] absolute top-1/2 -translate-y-1/2 right-0 hidden lg:block">
             <i className="fa-solid fa-xmark"></i>
           </button>
         </div>

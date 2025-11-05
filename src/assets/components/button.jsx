@@ -4,7 +4,7 @@ export function Button({ children, type, onClick }) {
   let style = "";
   if (type === "shopNow") {
     style =
-      " bg-black px-18 text-sm text-white hover:bg-black hover:opacity-70 ";
+      " bg-black px-[70px] text-sm text-white hover:bg-black hover:opacity-70 w-full md:w-auto ";
   }
   if (type === "viewAll") {
     style =
