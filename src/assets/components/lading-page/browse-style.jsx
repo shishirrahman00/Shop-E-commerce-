@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 export function BrowseStyle() {
   return (
     <div>
-      <div className="container bg-[#F0F0F0] rounded-[40px] py-[70px] px-16">
+      <div className="container bg-[#F0F0F0] rounded-[40px] py-[70px] xl:px-16 md:px-14 px-6">
         <div>
-          <h1 className="text-5xl text-center mb-16">Browse BY CateGory</h1>
+          <h1 className="text-[32px] leading-9 lg:text-5xl lg:leading-11  text-center mb-16">
+            Browse BY CateGory
+          </h1>
         </div>
-        <div className="grid grid-cols-12 gap-x-5 ">
-          <div className="col-start-1 col-end-5">
-            <div className="relative mb-5">
+        <div className="grid grid-cols-12 gap-x-5 gap-y-5 mb-5">
+          <div className="xl:col-start-1 xl:col-end-5 col-start-1 col-end-13">
+            <div className="relative ">
               <Link to="/">
                 <img
                   src="/images/beauty.png"
@@ -24,8 +26,8 @@ export function BrowseStyle() {
               </div>
             </div>
           </div>
-          <div className="col-start-5 col-end-13">
-            <div className="relative mb-5">
+          <div className="xl:col-start-5 xl:col-end-13 col-start-1 col-end-13">
+            <div className="relative ">
               <Link to="/">
                 <img
                   src="/images/furniture.png"
@@ -41,8 +43,8 @@ export function BrowseStyle() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-x-5">
-          <div className="col-start-1 col-end-8">
+        <div className="grid grid-cols-12 gap-x-5 gap-y-5">
+          <div className="xl:col-start-1 xl:col-end-8 col-start-1 col-end-13">
             <div className="relative">
               <Link to="/">
                 <img
@@ -58,7 +60,7 @@ export function BrowseStyle() {
               </div>
             </div>
           </div>
-          <div className="col-start-8 col-end-13">
+          <div className="xl:col-start-8 xl:col-end-13 col-start-1 col-end-13">
             <div className="relative">
               <Link to="/">
                 <img

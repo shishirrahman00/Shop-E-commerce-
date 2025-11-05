@@ -11,7 +11,7 @@ export function LandingPageIndex() {
       <LogoBanner />
       <div>
         <div className="container py-[62px]  border-b border-black/10">
-          <h1 className="uppercase text-center text-5xl mb-[52px] ">
+          <h1 className="uppercase text-center text-[32px] md:text-4xl lg:text-5xl  mb-[52px] ">
             New Arrivals
           </h1>
           <ProductSlider />
