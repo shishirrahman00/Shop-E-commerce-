@@ -144,13 +144,13 @@ export function Header() {
                   <h4 className="text-2xl">Your cart is empty</h4>
                 </div>
               ) : (
-                <div className="grid flex-1 auto-rows-min gap-6 px-4 overflow-y-scroll overflow-x-hidden">
-                  <div className="grid gap-3">
+                <div className="grid flex-1 auto-rows-min gap-6 px-4 overflow-y-auto ">
+                  <div className="grid gap-3 ">
                     {state.cart.map((product) => {
                       return (
                         <div
                           key={product.id}
-                          className=" relative border-b  border-b-black/10 py-4"
+                          className=" relative border-b  border-b-black/10 py-4 overflow-x-hidden line-clamp-2 "
                         >
                           <div className="flex items-center gap-x-3">
                             <img
@@ -158,8 +158,8 @@ export function Header() {
                               alt={product.title}
                               className="max-w-[80px] max-h-[80px] h-full shrink-0  object-cover  bg-[#F0F0F0]  "
                             />
-                            <div>
-                              <h4 className="text-[18px] truncate mb-1 line-clamp-2 mr-4">
+                            <div className="line-clamp-2 overflow-hidden">
+                              <h4 className="text-[18px] truncate mb-1  pr-10 line-clamp-2">
                                 {product.title}
                               </h4>
                               <p className="text-[18px] mb-2">
