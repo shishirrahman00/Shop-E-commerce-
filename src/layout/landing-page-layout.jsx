@@ -1,6 +1,6 @@
-import { AnnouncementBar } from "../assets/components/AnnouncementBar";
-import { Footer } from "../assets/components/Footer";
-import { Header } from "../assets/components/Header";
+import { AnnouncementBar } from "@/components/announcementBar";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 export function LandingPageLayout({ children }) {
   return (

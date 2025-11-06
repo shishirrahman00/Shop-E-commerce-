@@ -1,5 +1,5 @@
-import { CategoryFilter } from "../../assets/components/category-page/category-filter";
-import { CategoryProducts } from "../../assets/components/category-page/category-products";
+import { CategoryFilter } from "../../components/category-page/category-filter";
+import { CategoryProducts } from "../../components/category-page/category-products";
 
 export function CategoryPage() {
   return (
