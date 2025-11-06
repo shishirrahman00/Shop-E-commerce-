@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { ProductContextPovider } from "./context/product-context";
 import { ProductLoader, SingleProductLoader } from "./loader/product-loader";
+// import { CategoryProductPage } from "./pages/category-product-page/category-product-page";
 
 function App() {
   const queryClient = new QueryClient();
@@ -36,9 +37,9 @@ function App() {
           path: "/shop",
           lazy: async () => {
             return {
-              Component: await import(
-                "./pages/category-page/category-page"
-              ).then((comp) => comp.CategoryPage),
+              Component: await import("./pages/shop-page/category-page").then(
+                (comp) => comp.CategoryPage
+              ),
             };
           },
 
@@ -46,6 +47,7 @@ function App() {
         },
         {
           path: "/productdetails/:id",
+          loader: SingleProductLoader,
           lazy: async () => {
             return {
               Component: await import(
@@ -53,8 +55,18 @@ function App() {
               ).then((comp) => comp.ProductDetails),
             };
           },
-          loader: SingleProductLoader,
         },
+        // {
+        //   path: "/shop/category/:category",
+        //   element: <CategoryProductPage />,
+        //   lazy: async () => {
+        //     return {
+        //       Component: await import(
+        //         "./pages/category-product-page/category-product-page"
+        //       ).then((comp) => comp.CategoryProductPage),
+        //     };
+        //   },
+        // },
         {
           path: "/checkoutcart",
           lazy: async () => {

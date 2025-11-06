@@ -4,15 +4,8 @@ export async function ProductLoader() {
       .then((res) => res.json())
       .then((data) => data.products);
 
-    // const singleProduct = await fetch(
-    //   `https://dummyjson.com/products/${params.id}`
-    // )
-    //   .then((res) => res.json())
-    //   .then((data) => data);
-
     return {
       products: data,
-      // singleProduct: singleProduct,
     };
   } catch {
     return {
@@ -37,3 +30,19 @@ export async function SingleProductLoader({ params }) {
     return { error: true, message: "Failed to fetch product" };
   }
 }
+// export async function CategoryProduct({ params }) {
+//   const { category } = params;
+//   try {
+//     const categoryProduct = await fetch(
+//       `https://dummyjson.com/products/category/${category}`
+//     )
+//       .then((res) => res.json())
+//       .then((data) => data);
+
+//     return {
+//       categoryProduct: categoryProduct,
+//     };
+//   } catch {
+//     return { error: true, message: "Failed to fetch product category" };
+//   }
+// }

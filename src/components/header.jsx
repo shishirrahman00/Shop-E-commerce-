@@ -35,40 +35,33 @@ export function Header() {
                   <h1 className="text-2xl ">SHOP.CO</h1>
                 </SheetTitle>
               </SheetHeader>
-              <div className="grid flex-1 auto-rows-min gap-6 px-4">
-                <ul className="flex flex-col items-center ">
-                  <li>
-                    <Link
-                      to="/checkoutcart"
-                      className="text-base hover:text-opacity-[40%] inline-flex items-center justify-center gap-x-1"
-                    >
-                      Shop
-                      <img src="/icons/Frame.svg" alt="drop icon" />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/" className="text-base hover:text-opacity-[40%]">
-                      On Sale
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/"
-                      className=" text-base hover:text-opacity-[40%]"
-                    >
-                      New Arrivals
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/"
-                      className=" text-base hover:text-opacity-[40%]"
-                    >
-                      Brands
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+
+              <ul className="flex flex-col px-6 gap-y-5">
+                <li className="flex items-center  ">
+                  <Link
+                    to="/checkoutcart"
+                    className="text-base hover:text-opacity-[40%] inline-flex items-center gap-x-1 "
+                  >
+                    Shop
+                    <img src="/icons/Frame.svg" alt="drop icon" />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="text-base hover:text-opacity-[40%]">
+                    On Sale
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className=" text-base hover:text-opacity-[40%]">
+                    New Arrivals
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className=" text-base hover:text-opacity-[40%]">
+                    Brands
+                  </Link>
+                </li>
+              </ul>
             </SheetContent>
           </Sheet>
           <div>

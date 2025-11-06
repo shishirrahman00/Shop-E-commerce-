@@ -12,39 +12,38 @@ export function CheckoutCart() {
   const deliveryFee = 15;
   const discount = (20 / 100).toFixed(2);
   return (
-    <div className="container">
+    <div className="container px-5 xl:px-0">
       <div>
         <h2>BREADCRUMB</h2>
       </div>
       <div>
         <h1 className="text-[40px] uppercase mb-6">Your cart</h1>
       </div>
-      <div className="grid grid-cols-12 gap-x-5 pb-20">
-        <div className="col-start-1 col-end-8">
-          <div className="border border-black/10 rounded-[20px] w-full h-full overflow-hidden">
+      <div className="grid grid-cols-12 gap-x-5 gap-y-6 pb-20">
+        <div className="lg:col-start-1 lg:col-end-8 col-start-1 col-end-12">
+          <div className="border border-black/10 rounded-[20px] w-full md:h-full min-h-[280px] max-h-[400px] overflow-y-auto ">
             {state.cart.length === 0 ? (
-              <div className="flex items-center justify-center w-full h-full  ">
+              <div className="flex items-center justify-center w-full md:h-full min-h-[280px] ">
                 <h3 className="text-3xl">Your cart is empty</h3>
               </div>
             ) : (
-              <div className="max-h-[445px]  overflow-y-auto overflow-x-hidden divide-y divide-black/10">
+              <div className="  overflow-y-auto overflow-x-hidden divide-y divide-black/10">
                 {state.cart.map((product) => {
                   return (
-                    <div
-                      key={product.id}
-                      className="py-5 px-6 overflow-hidden "
-                    >
-                      <div className="flex items-center gap-x-4">
+                    <div key={product.id} className=" overflow-hidden ">
+                      <div className="flex items-center gap-x-4 py-5 md:px-6 px-[14px]">
                         <img
                           src={product.thumbnail}
                           alt={product.title}
-                          className="max-w-[100px] max-h-[100px] bg-[#F0F0F0]"
+                          className="md:max-w-[100px] md:max-h-[100px] max-w-[80px] max-h-[80px] bg-[#F0F0F0]"
                         />
-                        <div className="flex-1 ">
-                          <div className="flex justify-between">
-                            <h4>{product.title}</h4>
+                        <div className="flex-1 overflow-hidden ">
+                          <div className="flex justify-between  ">
+                            <h4 className="mr-2 truncate overflow-hidden">
+                              {product.title}
+                            </h4>
                             <button
-                              className="cursor-pointer"
+                              className="cursor-pointer shrink-0"
                               onClick={() => {
                                 return dispatch({
                                   type: PRODUCT_DELETE,
@@ -87,7 +86,7 @@ export function CheckoutCart() {
                                     },
                                   });
                                 }}
-                                className="rounded cursor-pointer w-8 h-8 flex flex-1 items-center justify-center bg-transparent hover:bg-amber-500/60 transition-colors duration-200 ease-in-out"
+                                className="rounded cursor-pointer md:w-8 w-6 md:h-8 h-6 flex flex-1 items-center justify-center bg-transparent hover:bg-amber-500/60 transition-colors duration-200 ease-in-out"
                               >
                                 <svg
                                   className="w-4 h-4"
@@ -104,7 +103,7 @@ export function CheckoutCart() {
                               <input
                                 type="number"
                                 value={product.quantity}
-                                className="w-12 px-1 text-center bg-transparent text-white outline-none appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                                className="md:w-12 w-8 px-1 text-center bg-transparent text-white outline-none appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                               />
 
                               <button
@@ -118,7 +117,7 @@ export function CheckoutCart() {
                                     },
                                   });
                                 }}
-                                className=" rounded cursor-pointer w-8 h-8 flex  flex-1 items-center justify-center bg-transparent hover:bg-amber-500/60 transition-colors duration-200 ease-in-out"
+                                className=" rounded cursor-pointer md:w-8 w-6 md:h-8 h-6  flex  flex-1 items-center justify-center bg-transparent hover:bg-amber-500/60 transition-colors duration-200 ease-in-out"
                               >
                                 <svg
                                   className="w-4 h-4"
@@ -143,7 +142,7 @@ export function CheckoutCart() {
             )}
           </div>
         </div>
-        <div className="col-start-8 col-end-13">
+        <div className="lg:col-start-8 lg:col-end-13 col-start-1 col-end-12">
           <div className="border border-black/10 rounded-[20px] py-5 px-6">
             <div className="flex flex-col gap-y-6">
               <h2>Order Summary</h2>
